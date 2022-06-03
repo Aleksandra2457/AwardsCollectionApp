@@ -26,7 +26,6 @@ struct CustomGridView<Content: View, T>: View {
                             ForEach(0..<columns, id: \.self) { columnIndex in
                                 if let index = getIndexFor(row: rowIndex, column: columnIndex) {
                                     content(sideLength, items[index])
-//                                        .frame(width: sideLength, height: sideLength)
                                 } else {
                                     Spacer()
                                 }
